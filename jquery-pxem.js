@@ -15,7 +15,7 @@ $.fn.toEm = function(settings){
 		scope: 'body'
 	}, settings);
 	// default 0 is required because $(0) holds jQuery init() function instead of 0 value yeldings this[0] = undefined
-	var that = parseInt(this[0] ||0, 10);
+	var that = parseInt(this[0] ||0, 10),
 			scopeTest = jQuery('<div style="display: none; font-size: 1em; margin: 0; padding:0; height: auto; line-height: 1; border:0;">&nbsp;</div>').appendTo(settings.scope),
 			scopeVal = scopeTest.height();
 	scopeTest.remove();
